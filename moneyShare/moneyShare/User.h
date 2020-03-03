@@ -4,10 +4,11 @@ using namespace std;
 class user {
 	protected:
 		string name;
-		double debt;
+		double totalDebt;
 	public:
 		user() {
 		};
 
+		~user() {};
 
 };
