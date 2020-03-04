@@ -12,6 +12,21 @@ class debt {
 		~debt() {
 
 		};
+
+		int getLender()
+		{
+			return lender;
+		}
+
+		int getReciever()
+		{
+			return reciever;
+		}
+
+		double getAmount()
+		{
+			return amount;
+		}
 };
 
 class debts {
@@ -35,5 +50,32 @@ class debts {
 			delete tempDebt;
 		}
 
+		void calculateNetOfUser(user* objUser){
+			int id = objUser->get_id();
 
+			double debt = 0;
+			double owed = 0;
+			double net = 0;
+			//Calculate net debt
+			
+			for (int i = 0; i < vecDebts->size(); i++)
+			{
+				if (vecDebts->at(i)->getReciever() == id)
+				{
+					debt = debt + vecDebts->at(i)->getAmount();
+				}
+			}
+
+			//Calculate net owed
+
+			for (int i = 0; i < vecDebts->size(); i++)
+			{
+				if (vecDebts->at(i)->getLender() == id)
+				{
+					debt = debt + vecDebts->at(i)->getAmount();
+				}
+			}
+
+			net = owed - debt;
+		};
 };
