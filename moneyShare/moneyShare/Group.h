@@ -21,4 +21,14 @@ class group
 		void AddToGroup(user* objuser) {
 			users->push_back(objuser);
 		};
+
+		int get_sizeOfGroup()
+		{
+			return users->size();
+		}
+
+		vector<user*>* get_users()
+		{
+			return users;
+		}
 };
