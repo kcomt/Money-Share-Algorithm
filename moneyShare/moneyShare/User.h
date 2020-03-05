@@ -1,6 +1,9 @@
 #pragma once
+#include <string>
+#include <time.h>
 #include "iostream"
 using namespace std;
+
 class user {
 	protected:
 		int id;
