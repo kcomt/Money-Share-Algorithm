@@ -1,5 +1,6 @@
 #pragma once
 #include "Group.h"
+#include <time.h>
 class debt {
 	private:
 		int lender;
@@ -35,6 +36,7 @@ class debts {
 		group * objgroup;
 	public:
 		debts(group* pobjgroup) {
+			srand((unsigned)time(NULL));
 			objgroup = pobjgroup;
 			vecDebts = new vector<debt*>;
 		};
@@ -89,8 +91,8 @@ class debts {
 		{
 			if (vecDebts->size() > 0)
 			{
-				vector<int>* idDebters = new vector<int>;
-				vector<int>* idOwed = new vector<int>;
+				vector<user*>* debters = new vector<user*>;
+				vector<user*>* owed = new vector<user*>;
 
 					for (int i = 0; i < objgroup->get_sizeOfGroup(); i++)
 					{
@@ -98,18 +100,41 @@ class debts {
 					}
 			
 
-				//Make FIFO list of debters
+				//Make FIFO list of debters and order it
 
 				for (int i = 0; i < objgroup->get_sizeOfGroup(); i++)
 				{
 					if (objgroup->get_users()->at(i)->get_net() < 0)
 					{
-						idDebters->push_back(objgroup->get_users()->at(i)->get_id());
+						debters->push_back(objgroup->get_users()->at(i));
 					}
 				}
+
+				debters = quickSort(debters);
+
 
 				//Make FIFO list of people owed
 
 			};
+		};
+
+		vector<user*>* quickSort(vector<user*>* users)
+		{
+			int pivot = rand() % users->size();
+			user* pivotUser = users->at(pivot);
+
+			//swap pivot element with last element
+
+			user* aux = pivotUser;
+			users->at(pivot) = users->at(users->size() - 1);
+			users->at(users->size() - 1) = aux;
+
+			int left = 0;
+			int right = users->size() - 2;
+
+			if (left < right)
+			{
+
+			}
 		};
 };
