@@ -51,4 +51,9 @@ class user {
 		{
 			net = amount;
 		};
+
+		string get_name()
+		{
+			return name;
+		}
 };

@@ -1,9 +1,11 @@
 ﻿  Main.cpp
 d:\github\moneyshare\moneyshare\moneyshare\debt.h(66): warning C4018: '<': signed/unsigned mismatch
 d:\github\moneyshare\moneyshare\moneyshare\debt.h(78): warning C4018: '<': signed/unsigned mismatch
-d:\github\moneyshare\moneyshare\moneyshare\debt.h(143): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(134): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(141): warning C4018: '<': signed/unsigned mismatch
 d:\github\moneyshare\moneyshare\moneyshare\debt.h(155): warning C4018: '<': signed/unsigned mismatch
-d:\github\moneyshare\moneyshare\moneyshare\debt.h(170): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(167): warning C4018: '<': signed/unsigned mismatch
 d:\github\moneyshare\moneyshare\moneyshare\debt.h(182): warning C4018: '<': signed/unsigned mismatch
-d:\github\moneyshare\moneyshare\moneyshare\debt.h(191): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(194): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(203): warning C4018: '<': signed/unsigned mismatch
   moneyShare.vcxproj -> D:\GitHub\moneyShare\moneyShare\Debug\moneyShare.exe

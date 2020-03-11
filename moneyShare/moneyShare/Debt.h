@@ -88,12 +88,10 @@ class debts {
 			net = owed - debt;
 
 			objUser->set_net(net);
-			cout << net << endl;
 		};
 
 		void settleDebts()
 		{
-			showDebts();
 
 			if (vecDebts->size() > 0)
 			{
@@ -130,6 +128,26 @@ class debts {
 
 				owed = bubbleSortMax(owed);
 
+				//Show list of debters and owed
+				cout << endl << "DEBTERS: " << endl;
+
+				for (int i = 0; i < debters->size(); i++)
+				{
+					cout << debters->at(i)->get_name() << " " << debters->at(i)->get_net() <<endl;
+				}
+
+				cout <<endl << "OWED: " << endl;
+
+				for (int i = 0; i < owed->size(); i++)
+				{
+					cout << owed->at(i)->get_name() << " " << owed->at(i)->get_net();
+				}
+
+
+				while()
+				{
+
+				}
 			};
 		};
 
@@ -192,5 +210,33 @@ class debts {
 			{
 				cout << vecDebts->at(i)->getLender() << " " << vecDebts->at(i)->getReciever() << " " << vecDebts->at(i)->getAmount() <<endl;
 			}
+		}
+};
+
+class record {
+	private:
+		int idPayer;
+		int idReciever;
+		string namePayer;
+		string nameReciever;
+		double amount;
+	public:
+		record(int pidPayer, int pidReciever, string pnamePayer, string pnameReciever, double pamount)
+		{
+			 idPayer = pidPayer;
+			 idReciever = pidReciever;
+			 namePayer = pnamePayer;
+			 nameReciever = pnameReciever;
+			 amount = pamount;
+		}
+		
+		~record()
+		{
+
+		}
+
+		void shouldPay()
+		{
+			cout << endl << namePayer << "should pay " << amount << " to " << nameReciever;
 		}
 };
