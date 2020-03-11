@@ -1,11 +1,13 @@
 ﻿  Main.cpp
-d:\github\moneyshare\moneyshare\moneyshare\debt.h(66): warning C4018: '<': signed/unsigned mismatch
-d:\github\moneyshare\moneyshare\moneyshare\debt.h(78): warning C4018: '<': signed/unsigned mismatch
-d:\github\moneyshare\moneyshare\moneyshare\debt.h(134): warning C4018: '<': signed/unsigned mismatch
-d:\github\moneyshare\moneyshare\moneyshare\debt.h(141): warning C4018: '<': signed/unsigned mismatch
-d:\github\moneyshare\moneyshare\moneyshare\debt.h(155): warning C4018: '<': signed/unsigned mismatch
-d:\github\moneyshare\moneyshare\moneyshare\debt.h(167): warning C4018: '<': signed/unsigned mismatch
-d:\github\moneyshare\moneyshare\moneyshare\debt.h(182): warning C4018: '<': signed/unsigned mismatch
-d:\github\moneyshare\moneyshare\moneyshare\debt.h(194): warning C4018: '<': signed/unsigned mismatch
-d:\github\moneyshare\moneyshare\moneyshare\debt.h(203): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(97): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(109): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(165): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(172): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(180): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(202): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(216): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(228): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(243): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(255): warning C4018: '<': signed/unsigned mismatch
+d:\github\moneyshare\moneyshare\moneyshare\debt.h(264): warning C4018: '<': signed/unsigned mismatch
   moneyShare.vcxproj -> D:\GitHub\moneyShare\moneyShare\Debug\moneyShare.exe

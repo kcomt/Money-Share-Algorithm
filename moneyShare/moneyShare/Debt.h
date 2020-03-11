@@ -33,15 +33,46 @@ class debt {
 		}
 };
 
+
+class record {
+private:
+	int idPayer;
+	int idReciever;
+	string namePayer;
+	string nameReciever;
+	double amount;
+public:
+	record(int pidPayer, int pidReciever, string pnamePayer, string pnameReciever, double pamount)
+	{
+		idPayer = pidPayer;
+		idReciever = pidReciever;
+		namePayer = pnamePayer;
+		nameReciever = pnameReciever;
+		amount = pamount;
+	}
+
+	~record()
+	{
+
+	}
+
+	void shouldPay()
+	{
+		cout << endl << namePayer << " should pay " << amount << " to " << nameReciever;
+	}
+};
+
 class debts {
 	private:
 		vector<debt*>* vecDebts;
 		group * objgroup;
+		vector<record*>* vecRecords;
 	public:
 		debts(group* pobjgroup) {
 			srand((unsigned)time(NULL));
 			objgroup = pobjgroup;
 			vecDebts = new vector<debt*>;
+			vecRecords = new vector<record*>;
 		};
 
 		~debts() {
@@ -143,10 +174,34 @@ class debts {
 					cout << owed->at(i)->get_name() << " " << owed->at(i)->get_net();
 				}
 
+				int iteDebters = 0;
+				int iteOwed = 0;
 
-				while()
+				while(iteOwed < owed->size() &&  iteDebters < debters->size())
 				{
+					if (owed->at(iteOwed)->get_net() + debters->at(iteDebters)->get_net() > 0)
+					{
+						record* auxrec = new record(debters->at(iteDebters)->get_id(), owed->at(iteOwed)->get_id(), debters->at(iteDebters)->get_name(), owed->at(iteOwed)->get_name(),
+							-1*debters->at(iteDebters)->get_net());
 
+						vecRecords->push_back(auxrec);
+
+						iteDebters++;
+					}
+					else
+					{
+						record* auxrec = new record(debters->at(iteDebters)->get_id(), owed->at(iteOwed)->get_id(), debters->at(iteDebters)->get_name(), owed->at(iteOwed)->get_name(),
+							owed->at(iteOwed)->get_net());
+
+						vecRecords->push_back(auxrec);
+
+						iteOwed++;
+					}
+				}
+
+				for (int i = 0; i < vecRecords->size(); i++)
+				{
+					vecRecords->at(i)->shouldPay();
 				}
 			};
 		};
@@ -210,33 +265,5 @@ class debts {
 			{
 				cout << vecDebts->at(i)->getLender() << " " << vecDebts->at(i)->getReciever() << " " << vecDebts->at(i)->getAmount() <<endl;
 			}
-		}
-};
-
-class record {
-	private:
-		int idPayer;
-		int idReciever;
-		string namePayer;
-		string nameReciever;
-		double amount;
-	public:
-		record(int pidPayer, int pidReciever, string pnamePayer, string pnameReciever, double pamount)
-		{
-			 idPayer = pidPayer;
-			 idReciever = pidReciever;
-			 namePayer = pnamePayer;
-			 nameReciever = pnameReciever;
-			 amount = pamount;
-		}
-		
-		~record()
-		{
-
-		}
-
-		void shouldPay()
-		{
-			cout << endl << namePayer << "should pay " << amount << " to " << nameReciever;
 		}
 };
